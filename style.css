@@ -1,0 +1,508 @@
+/*
+Theme Name: Lessonlark
+Theme URI: https://mathiswp.com/
+Author: MathisWP
+Author URI: https://mathiswp.com/
+Description: A warm, modern block theme for tutors, tutoring centers, and education businesses. Includes a complete landing page, subject cards, testimonials, FAQ, and calls to action — all editable in the Site Editor — plus bundled Fraunces and Figtree fonts and multiple color variations.
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 7.4
+Version: 0.2.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lessonlark
+Tags: education, full-site-editing, block-patterns, block-styles, style-variations, one-column, grid-layout, custom-colors, custom-logo, editor-style, translation-ready, wide-blocks, threaded-comments
+*/
+
+/* ---------- Base ---------- */
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		transition: none !important;
+		animation: none !important;
+	}
+}
+
+:where(h1, h2, h3) {
+	text-wrap: balance;
+}
+
+:where(p) {
+	text-wrap: pretty;
+}
+
+::selection {
+	background: var(--wp--preset--color--sunshine);
+	color: var(--wp--preset--color--contrast);
+}
+
+/* Offset in-page anchors so they clear the sticky header. */
+[id] {
+	scroll-margin-top: 6rem;
+}
+
+/* Sections butt up against each other; spacing comes from each section's padding. */
+.wp-site-blocks > * + * {
+	margin-block-start: 0;
+}
+
+/* ---------- Sticky header ---------- */
+
+.wp-site-blocks > header.wp-block-template-part {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+}
+
+.admin-bar .wp-site-blocks > header.wp-block-template-part {
+	top: var(--wp-admin--admin-bar--height, 32px);
+}
+
+@media (max-width: 600px) {
+	.admin-bar .wp-site-blocks > header.wp-block-template-part {
+		top: 0;
+	}
+}
+
+.lessonlark-header {
+	background-color: color-mix(in srgb, var(--wp--preset--color--base) 88%, transparent) !important;
+	-webkit-backdrop-filter: saturate(1.4) blur(12px);
+	backdrop-filter: saturate(1.4) blur(12px);
+}
+
+@media (max-width: 480px) {
+	.lessonlark-header .wp-block-buttons {
+		display: none;
+	}
+}
+
+/* ---------- Buttons ---------- */
+
+.wp-element-button,
+.wp-block-button__link {
+	transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.wp-block-button__link:hover {
+	transform: translateY(-2px);
+}
+
+.wp-block-button:not(.is-style-outline) .wp-block-button__link {
+	box-shadow: 0 10px 24px -10px color-mix(in srgb, var(--wp--preset--color--primary) 60%, transparent);
+}
+
+/* ---------- Block style: paragraph "Eyebrow" ---------- */
+
+.is-style-eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	width: fit-content;
+	padding: 0.4em 0.95em;
+	border-radius: 999px;
+	background-color: var(--wp--preset--color--surface);
+	border: 1px solid var(--wp--preset--color--border);
+	color: var(--wp--preset--color--primary);
+	font-size: 0.8125rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	line-height: 1.3;
+}
+
+.is-style-eyebrow.has-text-align-center {
+	margin-inline: auto;
+}
+
+.is-style-eyebrow.has-background {
+	border-color: transparent;
+}
+
+/* ---------- Block style: group "Card" ---------- */
+
+.is-style-card {
+	background-color: var(--wp--preset--color--surface);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 24px;
+	box-shadow: var(--wp--preset--shadow--soft);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.is-style-card:not([style*="padding"]) {
+	padding: var(--wp--preset--spacing--40);
+}
+
+.is-style-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--wp--preset--shadow--lifted);
+}
+
+/* ---------- Highlighted words (Highlight format inside headings) ---------- */
+
+:where(h1, h2) mark {
+	background: linear-gradient(transparent 58%, var(--wp--preset--color--sunshine) 58%, var(--wp--preset--color--sunshine) 92%, transparent 92%) !important;
+	color: inherit;
+	padding-inline: 0.06em;
+}
+
+/* ---------- Hero ---------- */
+
+.lessonlark-hero {
+	position: relative;
+	overflow: hidden;
+}
+
+.lessonlark-hero::before {
+	content: "";
+	position: absolute;
+	width: 44rem;
+	height: 44rem;
+	right: -14rem;
+	top: -16rem;
+	border-radius: 50%;
+	background: radial-gradient(circle at 30% 30%, var(--wp--preset--color--tint), transparent 70%);
+	pointer-events: none;
+}
+
+.lessonlark-hero > * {
+	position: relative;
+}
+
+.lessonlark-hero-art {
+	position: relative;
+	isolation: isolate;
+}
+
+.lessonlark-hero-art::before,
+.lessonlark-hero-art::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+.lessonlark-hero-art::before {
+	width: 9rem;
+	height: 9rem;
+	top: -2.5rem;
+	right: -1.5rem;
+	background: var(--wp--preset--color--sunshine);
+}
+
+.lessonlark-hero-art::after {
+	width: 6rem;
+	height: 6rem;
+	bottom: -2rem;
+	left: -2rem;
+	background: var(--wp--preset--color--accent);
+	opacity: 0.9;
+}
+
+.lessonlark-float {
+	transition: transform 0.4s ease;
+}
+
+.lessonlark-float--left {
+	transform: rotate(-3deg);
+	margin-left: -1.5rem !important;
+}
+
+.lessonlark-float--right {
+	transform: rotate(2.5deg);
+	margin-right: -1rem !important;
+}
+
+.lessonlark-float--left > :first-child {
+	flex-shrink: 0;
+	white-space: nowrap;
+}
+
+.lessonlark-hero-art:hover .lessonlark-float {
+	transform: rotate(0);
+}
+
+@media (max-width: 781px) {
+	.lessonlark-float--left,
+	.lessonlark-float--right {
+		margin-inline: 0 !important;
+	}
+}
+
+/* ---------- Avatars (initials in a circle) ---------- */
+
+.lessonlark-avatar {
+	flex-shrink: 0;
+	width: 2.75rem;
+	height: 2.75rem;
+	border-radius: 50% !important;
+	display: grid !important;
+	place-items: center;
+	font-weight: 700;
+	font-size: 0.9375rem;
+	line-height: 1;
+}
+
+.lessonlark-avatar > * {
+	margin: 0 !important;
+}
+
+.lessonlark-avatar-stack > .lessonlark-avatar {
+	border: 3px solid var(--wp--preset--color--base);
+}
+
+.lessonlark-avatar-stack > .lessonlark-avatar + .lessonlark-avatar {
+	margin-left: -0.5rem !important;
+}
+
+/* ---------- Icon tiles (subject cards) ---------- */
+
+.lessonlark-icon-tile {
+	width: 3.5rem;
+	height: 3.5rem;
+	border-radius: 16px !important;
+	display: grid !important;
+	place-items: center;
+	flex-shrink: 0;
+}
+
+.lessonlark-icon-tile > * {
+	margin: 0 !important;
+	font-family: var(--wp--preset--font-family--serif);
+	font-weight: 700;
+	font-size: 1.375rem;
+	line-height: 1;
+}
+
+/* ---------- Stars ---------- */
+
+.lessonlark-stars {
+	color: #f5a623;
+	letter-spacing: 0.15em;
+	font-size: 1.125rem;
+	line-height: 1;
+}
+
+/* ---------- Steps ---------- */
+
+.lessonlark-step-num {
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: clamp(3rem, 6vw, 4.5rem) !important;
+	font-weight: 800;
+	line-height: 1 !important;
+	color: transparent !important;
+	-webkit-text-stroke: 2px var(--wp--preset--color--sunshine);
+}
+
+.lessonlark-step {
+	border: 1px solid color-mix(in srgb, var(--wp--preset--color--surface) 16%, transparent);
+	background: color-mix(in srgb, var(--wp--preset--color--surface) 5%, transparent);
+	border-radius: 24px;
+	transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.lessonlark-step:hover {
+	background: color-mix(in srgb, var(--wp--preset--color--surface) 10%, transparent);
+	transform: translateY(-4px);
+}
+
+/* ---------- FAQ ---------- */
+
+.lessonlark-faq .wp-block-details summary {
+	list-style: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+
+.lessonlark-faq .wp-block-details summary::-webkit-details-marker {
+	display: none;
+}
+
+.lessonlark-faq .wp-block-details summary::after {
+	content: "+";
+	flex-shrink: 0;
+	display: grid;
+	place-items: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	border-radius: 50%;
+	background: var(--wp--preset--color--tint);
+	color: var(--wp--preset--color--primary);
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 1.375rem;
+	font-weight: 500;
+	transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.lessonlark-faq .wp-block-details[open] summary::after {
+	transform: rotate(45deg);
+	background: var(--wp--preset--color--sunshine);
+	color: var(--wp--preset--color--contrast);
+}
+
+.lessonlark-faq .wp-block-details > :not(summary) {
+	color: var(--wp--preset--color--muted);
+	margin-top: 0.75rem;
+}
+
+/* ---------- Checklist (list with check badges) ---------- */
+
+.lessonlark-checklist {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	gap: 0.85rem;
+}
+
+.lessonlark-checklist li {
+	position: relative;
+	padding-left: 2.25rem;
+}
+
+.lessonlark-checklist li::before {
+	content: "✓";
+	position: absolute;
+	left: 0;
+	top: 0.1em;
+	display: grid;
+	place-items: center;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	background: var(--wp--preset--color--sunshine);
+	color: var(--wp--preset--color--contrast);
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+/* ---------- Call to action ---------- */
+
+.lessonlark-cta {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+}
+
+.lessonlark-cta::before,
+.lessonlark-cta::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+.lessonlark-cta::before {
+	width: 22rem;
+	height: 22rem;
+	top: -9rem;
+	left: -7rem;
+	background: color-mix(in srgb, var(--wp--preset--color--surface) 9%, transparent);
+}
+
+.lessonlark-cta::after {
+	width: 16rem;
+	height: 16rem;
+	bottom: -7rem;
+	right: -4rem;
+	background: var(--wp--preset--color--accent);
+	opacity: 0.85;
+}
+
+/* ---------- Footer ---------- */
+
+.lessonlark-footer a {
+	color: inherit;
+	text-decoration: none;
+	opacity: 0.8;
+	transition: opacity 0.18s ease;
+}
+
+.lessonlark-footer a:hover {
+	opacity: 1;
+	text-decoration: underline;
+}
+
+.lessonlark-footer-bottom {
+	border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+
+.lessonlark-footer .wp-block-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.lessonlark-footer .wp-block-list li + li {
+	margin-top: 0.6rem;
+}
+
+/* ---------- Blog cards ---------- */
+
+.lessonlark-post-card .wp-block-post-featured-image {
+	overflow: hidden;
+	border-radius: 16px;
+}
+
+.lessonlark-post-card .wp-block-post-featured-image img {
+	transition: transform 0.4s ease;
+}
+
+.lessonlark-post-card:hover .wp-block-post-featured-image img {
+	transform: scale(1.04);
+}
+
+/* ---------- Softer secondary text (follows the section's text color in every style variation) ---------- */
+
+.lessonlark-soft-text {
+	color: color-mix(in srgb, currentColor 72%, transparent);
+}
+
+/* ---------- Small screens: drop decorative circles that would sit behind text ---------- */
+
+@media (max-width: 781px) {
+	.lessonlark-hero-art::before,
+	.lessonlark-hero-art::after,
+	.lessonlark-cta::after {
+		display: none;
+	}
+}
+
+/* ---------- Photos (About, Hero with photo) ---------- */
+
+.lessonlark-photo img {
+	width: 100%;
+	box-shadow: var(--wp--preset--shadow--lifted);
+}
+
+/* Card that overlaps the bottom of a photo. */
+.lessonlark-photo-badge {
+	position: relative;
+	z-index: 1;
+	max-width: 21rem;
+	margin-top: -5rem !important;
+}
+
+@media (max-width: 781px) {
+	.lessonlark-photo-badge {
+		max-width: none;
+		margin-top: -3rem !important;
+		margin-inline: 1rem !important;
+	}
+}

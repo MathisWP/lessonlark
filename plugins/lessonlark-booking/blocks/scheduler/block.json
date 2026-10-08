@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"version": "0.1.1",
+	"name": "lessonlark/scheduler",
+	"title": "Scheduler (Cal.com / Calendly)",
+	"category": "embed",
+	"icon": "clock",
+	"description": "Let visitors pick a time from your Cal.com or Calendly calendar.",
+	"keywords": [ "calendly", "cal.com", "schedule", "appointment", "book" ],
+	"textdomain": "lessonlark-booking",
+	"attributes": {
+		"url": { "type": "string", "default": "" },
+		"height": { "type": "number", "default": 700 }
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide" ],
+		"spacing": { "margin": true }
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

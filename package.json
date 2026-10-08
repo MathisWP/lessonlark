@@ -1,0 +1,16 @@
+{
+	"name": "lessonlark",
+	"version": "0.2.0",
+	"private": true,
+	"description": "A WordPress block theme for tutoring and education businesses.",
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"start": "wp-env start",
+		"stop": "wp-env stop",
+		"destroy": "wp-env destroy",
+		"zip": "git archive --format=zip --prefix=lessonlark/ -o lessonlark.zip HEAD"
+	},
+	"devDependencies": {
+		"@wordpress/env": "^10.0.0"
+	}
+}

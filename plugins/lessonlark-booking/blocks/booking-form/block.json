@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"version": "0.1.1",
+	"name": "lessonlark/booking-form",
+	"title": "Booking form",
+	"category": "widgets",
+	"icon": "calendar-alt",
+	"description": "A ready-to-use tutoring request form. Requests are emailed to you and saved under Bookings.",
+	"keywords": [ "book", "contact", "form", "consultation", "tutor" ],
+	"textdomain": "lessonlark-booking",
+	"attributes": {
+		"recipient": { "type": "string", "default": "" },
+		"subjects": { "type": "string", "default": "" },
+		"submitLabel": { "type": "string", "default": "" },
+		"successMessage": { "type": "string", "default": "" },
+		"sendConfirmation": { "type": "boolean", "default": true }
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide" ],
+		"spacing": { "margin": true }
+	},
+	"editorScript": "file:./index.js",
+	"viewScript": "file:./view.js",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

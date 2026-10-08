@@ -1,0 +1,10 @@
+{
+	"core": null,
+	"mappings": {
+		"wp-content/themes/lessonlark": "."
+	},
+	"plugins": [ "./plugins/lessonlark-booking" ],
+	"config": {
+		"WP_DEVELOPMENT_MODE": "theme"
+	}
+}
