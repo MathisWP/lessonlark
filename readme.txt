@@ -35,6 +35,10 @@ Go to Appearance > Editor > Styles. Changes there apply site-wide.
 
 Open the block inserter, choose Patterns, and look in the "Lessonlark" category.
 
+= How do I change the phone number and email shown on the site? =
+
+Go to Appearance > Contact details and fill in your phone, email, and hours. They replace the sample details everywhere the theme shows them, including the call and email links.
+
 = Where do booking requests go? =
 
 To the site admin email by default (change it in the Booking form block's settings), and every request is also saved under Bookings in wp-admin. If emails don't arrive, your host probably needs an SMTP plugin; the requests are still saved.
@@ -48,6 +52,9 @@ Insert the "Book a session (calendar)" pattern and paste your booking link into 
 Some hosts don't let WordPress write files directly. Zip the plugins/lessonlark-booking folder from inside the theme and upload it under Plugins > Add New > Upload Plugin.
 
 == Changelog ==
+
+= 0.2.1 =
+* Contact details (phone, email, hours) are set once under Appearance → Contact details and fill in the footer, the booking section, and the call and email buttons, text and links together.
 
 = 0.2.0 =
 * Renamed from Tutor Theme to Lessonlark (to avoid confusion with Tutor LMS).

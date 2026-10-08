@@ -7,6 +7,7 @@ A warm, modern WordPress block theme for tutors and tutoring businesses, with a 
 - **A complete landing page out of the box:** hero, quick facts, subjects, how it works, reviews, FAQ, and booking, all as editable patterns.
 - **Booking that works on day one:** the bundled Lessonlark Booking plugin adds a request form (emailed to you and saved under **Bookings** in wp-admin, with spam protection and a "Followed up" workflow) and a Cal.com / Calendly scheduler block.
 - **Pages ready to go:** an About page starter, a photo-ready hero, and a "Page without title" template.
+- **Contact details in one place:** enter your phone, email, and hours under **Appearance → Contact details** and every spot that shows them updates, links included.
 - **Your brand, quickly:** three color variations (Default, Meadow, Berry), bundled Fraunces and Figtree fonts, and every color, font, and spacing value editable under **Appearance → Editor → Styles**.
 - **Automatic updates** from this repository's releases, like themes from WordPress.org.
 

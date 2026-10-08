@@ -18,11 +18,11 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} -->
 <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--40)">
-	<!-- wp:button -->
+	<!-- wp:button {"metadata":{"name":"Email button","bindings":{"url":{"source":"lessonlark/contact","args":{"key":"email_url"}}}}} -->
 	<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="mailto:hello@example.com"><?php echo esc_html__( 'Email us', 'lessonlark' ); ?></a></div>
 	<!-- /wp:button -->
 
-	<!-- wp:button {"className":"is-style-outline"} -->
+	<!-- wp:button {"metadata":{"name":"Call button","bindings":{"text":{"source":"lessonlark/contact","args":{"key":"call_label"}},"url":{"source":"lessonlark/contact","args":{"key":"phone_url"}}}},"className":"is-style-outline"} -->
 	<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="tel:+15550123456"><?php echo esc_html__( 'Call (555) 012-3456', 'lessonlark' ); ?></a></div>
 	<!-- /wp:button -->
 </div>

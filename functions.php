@@ -70,3 +70,4 @@ if ( is_admin() ) {
 }
 
 require_once get_template_directory() . '/inc/updates.php';
+require_once get_template_directory() . '/inc/contact.php';

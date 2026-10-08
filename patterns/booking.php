@@ -63,7 +63,7 @@ $lessonlark_steps = array(
 				<p style="font-weight:700"><?php echo esc_html__( 'Prefer to talk?', 'lessonlark' ); ?></p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:paragraph {"textColor":"muted","fontSize":"small"} -->
+				<!-- wp:paragraph {"metadata":{"name":"Phone, email & hours","bindings":{"content":{"source":"lessonlark/contact","args":{"key":"talk"}}}},"textColor":"muted","fontSize":"small"} -->
 				<p class="has-muted-color has-text-color has-small-font-size"><a href="tel:+15550123456"><?php echo esc_html__( '(555) 012-3456', 'lessonlark' ); ?></a> · <a href="mailto:hello@example.com">hello@example.com</a><br><?php echo esc_html__( 'Mon–Fri 3–8 PM · Sat 9 AM–1 PM', 'lessonlark' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>

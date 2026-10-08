@@ -506,3 +506,8 @@ html {
 		margin-inline: 1rem !important;
 	}
 }
+
+/* Contact details left empty (Appearance → Contact details) render as empty paragraphs; don't let them add space. */
+.lessonlark-footer p:empty {
+	display: none;
+}

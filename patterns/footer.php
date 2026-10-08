@@ -55,11 +55,11 @@ $lessonlark_footer_heading = '<!-- wp:heading {"level":2,"style":{"typography":{
 		<div class="wp-block-column">
 			<?php printf( $lessonlark_footer_heading, esc_html__( 'Contact', 'lessonlark' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 
-			<!-- wp:paragraph {"fontSize":"small"} -->
+			<!-- wp:paragraph {"metadata":{"name":"Email & phone","bindings":{"content":{"source":"lessonlark/contact","args":{"key":"email_phone"}}}},"fontSize":"small"} -->
 			<p class="has-small-font-size"><a href="mailto:hello@example.com">hello@example.com</a><br><a href="tel:+15550123456"><?php echo esc_html__( '(555) 012-3456', 'lessonlark' ); ?></a></p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:paragraph {"className":"lessonlark-soft-text","fontSize":"small"} -->
+			<!-- wp:paragraph {"metadata":{"name":"Hours","bindings":{"content":{"source":"lessonlark/contact","args":{"key":"hours"}}}},"className":"lessonlark-soft-text","fontSize":"small"} -->
 			<p class="lessonlark-soft-text has-small-font-size"><?php echo esc_html__( 'Mon–Fri 3–8 PM · Sat 9 AM–1 PM', 'lessonlark' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>

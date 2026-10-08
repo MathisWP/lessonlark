@@ -27,7 +27,7 @@
 			<div class="wp-block-button"><a class="wp-block-button__link has-contrast-color has-sunshine-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( home_url( '/#book' ) ); ?>"><?php echo esc_html__( 'Book your free consultation', 'lessonlark' ); ?></a></div>
 			<!-- /wp:button -->
 
-			<!-- wp:button {"className":"is-style-outline"} -->
+			<!-- wp:button {"metadata":{"name":"Call button","bindings":{"text":{"source":"lessonlark/contact","args":{"key":"call_label"}},"url":{"source":"lessonlark/contact","args":{"key":"phone_url"}}}},"className":"is-style-outline"} -->
 			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="tel:+15550123456"><?php echo esc_html__( 'Call (555) 012-3456', 'lessonlark' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
