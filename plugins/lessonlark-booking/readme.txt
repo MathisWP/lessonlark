@@ -4,7 +4,7 @@ Tags: booking, contact form, tutoring, calendly, cal.com
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.2.0
+Stable tag: 0.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,9 @@ Use the `lessonlark_booking_submitted` action. It receives the booking ID and th
 Submitted details are stored as private posts in your database and emailed to the recipient you configure. Visitor IP addresses are never stored; a one-way hash is kept for up to 10 minutes for rate limiting. The Scheduler block loads content from Cal.com or Calendly and is subject to their privacy policies.
 
 == Changelog ==
+
+= 0.2.1 =
+* Neutral wording in the form note, success message, error messages, and the visitor's confirmation email ("You'll hear back…"), signed with the site name, so it suits a solo tutor or a center.
 
 = 0.2.0 =
 * Replaced the "Reply by email" button with a "Followed up" flag: mark each request once you've contacted the family (by any channel). Bookings gets a Status column, "Needs follow-up" / "Followed up" filters, bulk actions, and the menu badge now counts requests still needing follow-up. Removed the Email column, and "Received" now shows the date the request came in.
