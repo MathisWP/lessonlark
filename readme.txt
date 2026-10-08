@@ -57,6 +57,7 @@ Some hosts don't let WordPress write files directly. Zip the plugins/lessonlark-
 * New patterns: About the tutor (photo + bio), How I teach, Hero with photo, and an About page starter that appears when you create a new page. Photo spots use a placeholder image you replace with your own.
 * New "Page without title" template for About and landing pages that bring their own headings.
 * Booking buttons in the hero, CTA, and FAQ link to the booking form on the homepage, so they work from any page.
+* Automatic update notifications from GitHub releases (MathisWP/lessonlark).
 * Redesign: new palette, bundled Fraunces and Figtree fonts, shadows, pill buttons.
 * New patterns: Stats, FAQ, Header, redesigned Hero, Services, How It Works, Testimonials, Call to Action, Footer.
 * Sticky header with call-to-action button; multi-column footer.
@@ -101,5 +102,10 @@ License file: assets/fonts/OFL-Figtree.txt
 
 Screenshot
 Created by MathisWP from this theme's own patterns. License: GPLv2 or later.
+
+Plugin Update Checker 5.7
+Copyright (c) 2023 Jānis Elsts
+License: MIT (inc/vendor/plugin-update-checker/license.txt)
+Source: https://github.com/YahnisElsts/plugin-update-checker
 
 This theme bundles no third-party images.

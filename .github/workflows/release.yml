@@ -1,0 +1,40 @@
+# Publishes a release when you push a version tag, e.g.:
+#   git tag v0.2.1 && git push origin v0.2.1
+# Builds lessonlark.zip (same as `npm run zip`) and attaches it to the release.
+# Sites running the theme pick it up as a normal one-click update.
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the tag matches the theme version
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          THEME=$(grep -m1 '^Version:' style.css | sed 's/Version:[[:space:]]*//' | tr -d '\r')
+          PLUGIN=$(grep -m1 'Version:' plugins/lessonlark-booking/lessonlark-booking.php | sed 's/.*Version:[[:space:]]*//' | tr -d '\r')
+          echo "Tag $TAG, theme $THEME, bundled plugin $PLUGIN"
+          if [ "$TAG" != "$THEME" ]; then
+            echo "::error::Tag v$TAG doesn't match Version: $THEME in style.css. Bump style.css (and readme.txt Stable tag) first."
+            exit 1
+          fi
+
+      - name: Build lessonlark.zip
+        run: git archive --format=zip --prefix=lessonlark/ -o lessonlark.zip HEAD
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Lessonlark ${{ github.ref_name }}
+          files: lessonlark.zip
+          generate_release_notes: true

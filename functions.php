@@ -68,3 +68,5 @@ add_action( 'init', 'lessonlark_register_pattern_category' );
 if ( is_admin() ) {
 	require_once get_template_directory() . '/inc/bundled-plugin.php';
 }
+
+require_once get_template_directory() . '/inc/updates.php';
