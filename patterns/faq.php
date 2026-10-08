@@ -12,15 +12,15 @@
 $lessonlark_faqs = array(
 	array(
 		__( 'How much does tutoring cost?', 'lessonlark' ),
-		__( 'Rates depend on subject and grade level. We’ll share exact pricing during your free consultation, with no pressure and no long-term contract.', 'lessonlark' ),
+		__( 'Rates depend on subject and grade level. I’ll share exact pricing during your free consultation, with no pressure and no long-term contract.', 'lessonlark' ),
 	),
 	array(
 		__( 'Are sessions online or in person?', 'lessonlark' ),
 		__( 'Both. Online sessions use a shared whiteboard and work on any laptop or tablet. In-person sessions are available locally.', 'lessonlark' ),
 	),
 	array(
-		__( 'How do you choose a tutor for my student?', 'lessonlark' ),
-		__( 'We match on subject expertise, schedule, and personality. If the fit isn’t right, we’ll switch tutors at no cost.', 'lessonlark' ),
+		__( 'What if it’s not a good fit?', 'lessonlark' ),
+		__( 'Just tell me. There’s no contract, and if another tutor would suit your student better, I’m happy to recommend one.', 'lessonlark' ),
 	),
 	array(
 		__( 'How will I know it’s working?', 'lessonlark' ),
@@ -47,7 +47,7 @@ $lessonlark_faqs = array(
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"textColor":"muted"} -->
-			<p class="has-muted-color has-text-color"><?php /* translators: %s: Link to the booking form. */ echo wp_kses_post( sprintf( __( 'Don’t see yours? <a href="%s">Get in touch</a> and we’ll answer within one business day.', 'lessonlark' ), esc_url( home_url( '/#book' ) ) ) ); ?></p>
+			<p class="has-muted-color has-text-color"><?php /* translators: %s: Link to the booking form. */ echo wp_kses_post( sprintf( __( 'Don’t see yours? <a href="%s">Get in touch</a> and I’ll answer within one business day.', 'lessonlark' ), esc_url( home_url( '/#book' ) ) ) ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->

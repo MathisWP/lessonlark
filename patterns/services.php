@@ -14,7 +14,7 @@ $lessonlark_subjects = array(
 		'icon'  => '√x',
 		'tile'  => 'tint',
 		'title' => __( 'Math', 'lessonlark' ),
-		'text'  => __( 'Arithmetic foundations through algebra, geometry, and calculus. We meet students where they are.', 'lessonlark' ),
+		'text'  => __( 'Arithmetic foundations through algebra, geometry, and calculus. I meet students where they are.', 'lessonlark' ),
 	),
 	array(
 		'icon'  => 'H₂O',

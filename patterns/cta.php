@@ -18,7 +18,7 @@
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
-		<p class="has-text-align-center has-large-font-size"><?php echo esc_html__( 'Book a free 20-minute consultation. We’ll listen, suggest a plan, and match you with the right tutor.', 'lessonlark' ); ?></p>
+		<p class="has-text-align-center has-large-font-size"><?php echo esc_html__( 'Book a free 20-minute consultation. I’ll listen, get to know your student, and suggest a plan that fits.', 'lessonlark' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} -->

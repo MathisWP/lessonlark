@@ -45,7 +45,7 @@
 						el( c.TextareaControl, {
 							label: __( 'Success message', 'lessonlark-booking' ),
 							value: a.successMessage,
-							placeholder: __( 'Thanks! We’ve got your request and will reply within one business day.', 'lessonlark-booking' ),
+							placeholder: __( 'Thanks! Your request is in. You’ll hear back within one business day.', 'lessonlark-booking' ),
 							onChange: function ( v ) { set( { successMessage: v } ); },
 						} ),
 						el( c.ToggleControl, {

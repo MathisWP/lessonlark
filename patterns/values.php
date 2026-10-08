@@ -14,7 +14,7 @@ $lessonlark_values = array(
 		'icon'  => '♡',
 		'tile'  => 'peach',
 		'title' => __( 'Patient', 'lessonlark' ),
-		'text'  => __( 'No rushing and no judgment. We slow down until it clicks, then build from there.', 'lessonlark' ),
+		'text'  => __( 'No rushing and no judgment. I slow down until it clicks, then build from there.', 'lessonlark' ),
 	),
 	array(
 		'icon'  => '✎',
@@ -26,7 +26,7 @@ $lessonlark_values = array(
 		'icon'  => '✓',
 		'tile'  => 'mint',
 		'title' => __( 'Transparent', 'lessonlark' ),
-		'text'  => __( 'A short note after every session, so you always know what we covered and what’s next.', 'lessonlark' ),
+		'text'  => __( 'A short note after every session, so you always know what your student covered and what’s next.', 'lessonlark' ),
 	),
 );
 ?>

@@ -55,6 +55,7 @@ Some hosts don't let WordPress write files directly. Zip the plugins/lessonlark-
 
 = 0.2.1 =
 * Contact details (phone, email, hours) are set once under Appearance → Contact details and fill in the footer, the booking section, and the call and email buttons, text and links together.
+* The site now speaks as one tutor ("I", "me") throughout, instead of mixing "we" on the homepage with "I" on the About page; the "match you with the right tutor" wording is gone. The booking form and its emails use neutral wording ("You’ll hear back…") so the plugin suits a solo tutor or a center.
 
 = 0.2.0 =
 * Renamed from Tutor Theme to Lessonlark (to avoid confusion with Tutor LMS).

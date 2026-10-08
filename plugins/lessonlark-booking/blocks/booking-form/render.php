@@ -111,7 +111,7 @@ $llb_return = remove_query_arg( 'lessonlark_booking', set_url_scheme( 'http://' 
 
 		<div class="lessonlark-booking__footer">
 			<div class="wp-block-button"><button type="submit" class="wp-block-button__link wp-element-button" data-sending="<?php esc_attr_e( 'Sending…', 'lessonlark-booking' ); ?>"><?php echo esc_html( $llb_submit ); ?></button></div>
-			<p class="lessonlark-booking__note"><?php esc_html_e( 'Free, no commitment. We reply within one business day.', 'lessonlark-booking' ); ?></p>
+			<p class="lessonlark-booking__note"><?php esc_html_e( 'Free, no commitment. You’ll hear back within one business day.', 'lessonlark-booking' ); ?></p>
 		</div>
 	</form>
 </div>

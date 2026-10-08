@@ -18,7 +18,7 @@
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"textColor":"muted","fontSize":"large"} -->
-	<p class="has-muted-color has-text-color has-large-font-size"><?php echo esc_html__( 'Practical advice for students and parents, from our tutors.', 'lessonlark' ); ?></p>
+	<p class="has-muted-color has-text-color has-large-font-size"><?php echo esc_html__( 'Practical study tips for students and parents.', 'lessonlark' ); ?></p>
 	<!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

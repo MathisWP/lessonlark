@@ -76,7 +76,7 @@ function lessonlark_booking_handle_submission() {
 	$ip_key = 'llb_rate_' . md5( isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '' );
 	$hits   = (int) get_transient( $ip_key );
 	if ( $hits >= LESSONLARK_BOOKING_RATE_LIMIT ) {
-		lessonlark_booking_respond( $is_ajax, $return, false, __( 'Too many requests. Please try again in a few minutes, or contact us directly.', 'lessonlark-booking' ) );
+		lessonlark_booking_respond( $is_ajax, $return, false, __( 'Too many requests. Please try again in a few minutes, or get in touch directly.', 'lessonlark-booking' ) );
 	}
 	set_transient( $ip_key, $hits + 1, LESSONLARK_BOOKING_RATE_WINDOW );
 
@@ -129,7 +129,7 @@ function lessonlark_booking_handle_submission() {
 		true
 	);
 	if ( is_wp_error( $post_id ) ) {
-		lessonlark_booking_respond( $is_ajax, $return, false, __( 'Something went wrong on our end. Please try again or contact us directly.', 'lessonlark-booking' ) );
+		lessonlark_booking_respond( $is_ajax, $return, false, __( 'Something went wrong. Please try again, or get in touch directly.', 'lessonlark-booking' ) );
 	}
 	foreach ( $data as $key => $value ) {
 		update_post_meta( $post_id, $key, $value );
@@ -189,14 +189,14 @@ function lessonlark_booking_send_notification( $post_id, $data, $config ) {
 function lessonlark_booking_send_confirmation( $data ) {
 	$site = wp_specialchars_decode( get_bloginfo( 'name' ), ENT_QUOTES );
 	/* translators: %s: Site name. */
-	$subject = sprintf( __( 'We got your request, %s', 'lessonlark-booking' ), $site );
+	$subject = sprintf( __( 'Your tutoring request with %s', 'lessonlark-booking' ), $site );
 	$body    = implode(
 		"\n\n",
 		array(
 			__( 'Hi there,', 'lessonlark-booking' ),
-			__( 'Thanks for reaching out! We’ve received your tutoring request and will reply within one business day to set up a free consultation.', 'lessonlark-booking' ),
+			__( 'Thanks for reaching out! Your tutoring request has been received, and you’ll hear back within one business day to set up a free consultation.', 'lessonlark-booking' ),
 			/* translators: %s: Site name. */
-			sprintf( __( '— The %s team', 'lessonlark-booking' ), $site ),
+			sprintf( __( '— %s', 'lessonlark-booking' ), $site ),
 		)
 	);
 	wp_mail( $data['_llb_email'], $subject, $body );

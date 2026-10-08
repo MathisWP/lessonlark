@@ -12,9 +12,9 @@
  */
 
 $lessonlark_steps = array(
-	__( 'Tell us a bit about your student using the form.', 'lessonlark' ),
-	__( 'We reply within one business day to schedule a free 20-minute call.', 'lessonlark' ),
-	__( 'We match you with the right tutor and book the first session.', 'lessonlark' ),
+	__( 'Tell me a bit about your student using the form.', 'lessonlark' ),
+	__( 'I reply within one business day to schedule a free 20-minute call.', 'lessonlark' ),
+	__( 'I put together a plan, and you pick a time for the first session.', 'lessonlark' ),
 );
 ?>
 <!-- wp:group {"metadata":{"name":"<?php echo esc_attr__( 'Book a session', 'lessonlark' ); ?>"},"anchor":"book","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"backgroundColor":"tint","layout":{"type":"constrained"}} -->
@@ -28,7 +28,7 @@ $lessonlark_steps = array(
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"fontSize":"xx-large"} -->
-			<h2 class="wp-block-heading has-xx-large-font-size"><?php echo esc_html__( 'Tell us about your student', 'lessonlark' ); ?></h2>
+			<h2 class="wp-block-heading has-xx-large-font-size"><?php echo esc_html__( 'Tell me about your student', 'lessonlark' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"textColor":"muted","fontSize":"large"} -->

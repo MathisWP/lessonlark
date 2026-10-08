@@ -13,7 +13,7 @@ $lessonlark_stats = array(
 	array( __( 'K–12', 'lessonlark' ), __( 'every grade level', 'lessonlark' ) ),
 	array( '1:1', __( 'every session', 'lessonlark' ) ),
 	array( '6', __( 'subjects covered', 'lessonlark' ) ),
-	array( __( '1 day', 'lessonlark' ), __( 'to hear back from us', 'lessonlark' ) ),
+	array( __( '1 day', 'lessonlark' ), __( 'to hear back from me', 'lessonlark' ) ),
 );
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained"}} -->

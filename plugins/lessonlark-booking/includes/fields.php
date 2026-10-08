@@ -59,7 +59,7 @@ function lessonlark_booking_parse_subjects( $list ) {
 function lessonlark_booking_default_config() {
 	return array(
 		'recipient' => '',
-		'success'   => __( 'Thanks! We’ve got your request and will reply within one business day.', 'lessonlark-booking' ),
+		'success'   => __( 'Thanks! Your request is in. You’ll hear back within one business day.', 'lessonlark-booking' ),
 		'confirm'   => true,
 		'subjects'  => __( 'Math, Science, Reading & Writing, Test Prep, Languages, Study Skills', 'lessonlark-booking' ),
 	);

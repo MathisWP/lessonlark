@@ -13,13 +13,13 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"muted"} -->
-<p class="has-muted-color has-text-color"><?php echo esc_html__( 'Email or call us with your student’s grade and the subjects they need help with. We’ll reply within one business day.', 'lessonlark' ); ?></p>
+<p class="has-muted-color has-text-color"><?php echo esc_html__( 'Email or call me with your student’s grade and the subjects they need help with. I’ll reply within one business day.', 'lessonlark' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} -->
 <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--40)">
 	<!-- wp:button {"metadata":{"name":"Email button","bindings":{"url":{"source":"lessonlark/contact","args":{"key":"email_url"}}}}} -->
-	<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="mailto:hello@example.com"><?php echo esc_html__( 'Email us', 'lessonlark' ); ?></a></div>
+	<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="mailto:hello@example.com"><?php echo esc_html__( 'Email me', 'lessonlark' ); ?></a></div>
 	<!-- /wp:button -->
 
 	<!-- wp:button {"metadata":{"name":"Call button","bindings":{"text":{"source":"lessonlark/contact","args":{"key":"call_label"}},"url":{"source":"lessonlark/contact","args":{"key":"phone_url"}}}},"className":"is-style-outline"} -->

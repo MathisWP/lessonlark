@@ -11,7 +11,7 @@
 
 $lessonlark_steps = array(
 	array( '01', __( 'Free consultation', 'lessonlark' ), __( 'A relaxed 20-minute call about your student’s goals, strengths, and where they’re getting stuck.', 'lessonlark' ) ),
-	array( '02', __( 'A plan that fits', 'lessonlark' ), __( 'We match your student with the right tutor and build a plan around how they actually learn.', 'lessonlark' ) ),
+	array( '02', __( 'A plan that fits', 'lessonlark' ), __( 'I build a plan around your student’s own curriculum and the way they actually learn.', 'lessonlark' ) ),
 	array( '03', __( 'Progress you can see', 'lessonlark' ), __( 'Weekly sessions and short progress notes, so you always know what’s working and what’s next.', 'lessonlark' ) ),
 );
 ?>
